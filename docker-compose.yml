@@ -8,7 +8,7 @@ services:
 
   bootstrap-site:
     image: fabryprog/scrypta-bootstrap-website:latest
-    volume:
+    volumes:
       - /your/folder/lyra-data:/opt/www/
     ports:
       - "80:80"
