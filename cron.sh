@@ -1,13 +1,17 @@
-cd /home/scrypta/lyra-data
+#!/bin/sh
+
+cd ~/.lyra
+
+pkill lyrad
 
 filename=bootstrap-$(date +"%Y%m%d-%H%M%S%3N").zip
 
 zip -r $filename chainstate blocks
 
-mv $filename /home/scrypta/lyra-data/files/
+cp $filename ~/bootstrap/latest.zip
+mv $filename ~/bootstrap/history/
 
 # delete old zip
-find /home/scrypta/lyra-data/files/*.zip -mtime +1 -exec rm {} \;
+find ~/bootstrap/history/*.zip -mtime +1 -exec rm {} \;
 
-
-
+~/lyrad &
