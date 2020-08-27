@@ -4,6 +4,8 @@ cd ~/.lyra
 
 pkill lyrad
 
+sleep 10s
+
 filename=bootstrap-$(date +"%Y%m%d-%H%M%S%3N").zip
 
 zip -r $filename chainstate blocks
