@@ -5,11 +5,11 @@
 
 Install wallet and run the cron.sh every desired minutes.
 
-Wallet must be in ~ folder and you have to create two folders:
+Wallet must be in ~ folder and you have to create two folders in `home` directory:
 
 ```
-mkdir ~/bootstrap
-mkdir ~/bootstrap/history
+mkdir /home/bootstrap
+mkdir /home/bootstrap/history
 ```
 
 The script will leave a `latest.zip` file containing latest bootstrap, then the history will contain the historical generation.
